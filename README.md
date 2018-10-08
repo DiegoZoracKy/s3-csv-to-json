@@ -76,5 +76,5 @@ Just post a JSON as already shown above:
 Clone the repo and execute it using the module [MagiCLI](https://github.com/DiegoZoracKy/magicli) via `npx`:
 
 ```bash
-npx path-to-s3-csv-to-json-module --input="s3://bucket-name/path/to/input.csv.gz" --output="s3://bucket-name/path/to/output.json.gz"
+npx magicli ./path-to-s3-csv-to-json-module --input="s3://bucket-name/path/to/input.csv.gz" --output="s3://bucket-name/path/to/output.json.gz"
 ```
