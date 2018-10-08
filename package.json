@@ -1,12 +1,16 @@
 {
   "name": "s3-csv-to-json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Converts CSV files to JSON via stream with support to gzip for both input and output. Built to work with files stored on AWS S3. Prepared to be used as a Node.js module, as a Lambda or via CLI.",
   "main": "./src/s3-csv-to-json.js",
   "author": {
     "name": "Diego ZoracKy",
     "email": "diego.zoracky@gmail.com",
     "url": "https://github.com/DiegoZoracKy/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DiegoZoracKy/s3-csv-to-json"
   },
   "license": "MIT",
   "keywords": [
