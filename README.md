@@ -1,6 +1,6 @@
 # s3-csv-to-json
 
-Converts AWS S3 files from CSV to JSON via stream with support to gzip for both input and output. Ready to be used as a Node.js module, as a Lambda or via CLI.
+Converts AWS S3 files from CSV to JSON lines via stream with support to gzip for both input and output. Ready to be used as a Node.js module, as a Lambda or via CLI.
 
 Currently it downloads the input file from S3 and upload the result back to it. A support to have one of the both ends pointing to a local file will be worked on.
 
@@ -41,7 +41,7 @@ Using it as a module, a Lambda or via CLI, it just expects an **input** and a **
 ```json
 {
     "input": "https://s3.amazonaws.com/bucket-name/path/to/input.csv.gz",
-    "output": "s3://bucket-name/path/to/output.json.gz"
+    "output": "s3://bucket-name/path/to/output.jsonl.gz"
 }
 ```
 
@@ -57,7 +57,7 @@ const s3CsvToJson = require('s3-csv-to-json.js');
 // Assuming that the following is within an async function
 const response = await s3CsvToJson({
     input: "https://s3.amazonaws.com/bucket-name/path/to/input.csv.gz",
-    output: "s3://bucket-name/path/to/output.json.gz"
+    output: "s3://bucket-name/path/to/output.jsonl.gz"
 });
 ```
 
@@ -67,7 +67,7 @@ Just post a JSON as already shown above:
 ```json
 {
     "input": "https://s3.amazonaws.com/bucket-name/path/to/input.csv.gz",
-    "output": "s3://bucket-name/path/to/output.json.gz"
+    "output": "s3://bucket-name/path/to/output.jsonl.gz"
 }
 ```
 
@@ -76,5 +76,22 @@ Just post a JSON as already shown above:
 Clone the repo and execute it using the module [MagiCLI](https://github.com/DiegoZoracKy/magicli) via `npx`:
 
 ```bash
-npx magicli ./path-to-s3-csv-to-json-module --input="s3://bucket-name/path/to/input.csv.gz" --output="s3://bucket-name/path/to/output.json.gz"
+npx magicli ./path-to-s3-csv-to-json-module --input="s3://bucket-name/path/to/input.csv.gz" --output="s3://bucket-name/path/to/output.jsonl.gz"
+```
+
+## Example
+
+CSV Input:
+
+```
+ID, NAME
+1,John Doe
+2,Jane Doe
+```
+
+JSON lines output:
+
+```
+{"ID":"1"," NAME":"John Doe"}
+{"ID":"2"," NAME":"Jane Doe"}
 ```
