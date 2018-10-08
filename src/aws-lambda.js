@@ -1,4 +1,4 @@
-const s3CsvToJson = require('.s3-csv-to-json');
+const s3CsvToJson = require('./s3-csv-to-json.js');
 
 async function handler({ input, output }) {
     try {

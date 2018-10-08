@@ -5,7 +5,7 @@ const stream = require('stream');
 const path = require('path');
 const csv = require('csv-parser');
 const zlib = require('zlib');
-const getBucketAndKeyFromS3Url = require('./modules/bucket-key-from-s3-url');
+const parseS3BucketKey = require('../modules/parse-s3-bucket-key');
 
 function createObjectToJsonLineStream() {
     return new stream.Transform({
@@ -21,8 +21,8 @@ function createObjectToJsonLineStream() {
 function s3CsvToJson({ input, output }) {
     return new Promise((resolve, reject) => {
         const s3 = new AWS.S3();
-        const inputParams = getBucketAndKeyFromS3Url(input);
-        const outputParams = getBucketAndKeyFromS3Url(output);
+        const inputParams = parseS3BucketKey(input);
+        const outputParams = parseS3BucketKey(output);
 
         let pipeline = s3.getObject(inputParams)
             .createReadStream()
