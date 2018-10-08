@@ -1,6 +1,6 @@
 {
   "name": "s3-csv-to-json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Converts CSV files to JSON via stream with support to gzip for both input and output. Built to work with files stored on AWS S3. Prepared to be used as a Node.js module, as a Lambda or via CLI.",
   "main": "./src/s3-csv-to-json.js",
   "author": {

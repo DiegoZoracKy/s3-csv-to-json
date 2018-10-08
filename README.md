@@ -73,8 +73,8 @@ Just post a JSON as already shown above:
 
 ### CLI
 
-Execute it using the module [MagiCLI](https://github.com/DiegoZoracKy/magicli) via `npx`:
+Clone the repo and execute it using the module [MagiCLI](https://github.com/DiegoZoracKy/magicli) via `npx`:
 
 ```bash
-npx s3-csv-to-json --input="s3://bucket-name/path/to/input.csv.gz" --output="s3://bucket-name/path/to/output.json.gz"
+npx path-to-s3-csv-to-json-module --input="s3://bucket-name/path/to/input.csv.gz" --output="s3://bucket-name/path/to/output.json.gz"
 ```
