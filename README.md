@@ -81,17 +81,17 @@ npx magicli ./path-to-s3-csv-to-json-module --input="s3://bucket-name/path/to/in
 
 ## Example
 
-CSV Input:
+**CSV Input:**
 
 ```
-ID, NAME
+ID,NAME
 1,John Doe
 2,Jane Doe
 ```
 
-JSON lines output:
+**JSON lines output:**
 
 ```
-{"ID":"1"," NAME":"John Doe"}
-{"ID":"2"," NAME":"Jane Doe"}
+{"ID":"1","NAME":"John Doe"}
+{"ID":"2","NAME":"Jane Doe"}
 ```
