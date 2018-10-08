@@ -1,7 +1,5 @@
 # s3-csv-to-json
 
-[![Build Status](https://api.travis-ci.org/DiegoZoracKy/s3-csv-to-json.svg)](https://travis-ci.org/DiegoZoracKy/s3-csv-to-json) [![npm](https://img.shields.io/npm/v/s3-csv-to-json.svg)]() [![npm](https://img.shields.io/npm/l/s3-csv-to-json.svg)]()
-
 Converts CSV files to JSON via stream with support to gzip for both input and output. Built to work with files stored on AWS S3. It is prepared to be used as a Node.js module, as a Lambda or via CLI.
 
 Currently it downloads the input file from S3 and upload the result back to it. A support to have one of the both ends pointing to a local file will be worked on.
