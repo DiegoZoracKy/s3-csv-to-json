@@ -1,0 +1,23 @@
+{
+  "name": "s3-csv-to-json",
+  "version": "0.0.1",
+  "description": "Converts CSV to JSON with support to gzip as input and output",
+  "main": "index.js",
+  "author": {
+    "name": "Diego ZoracKy",
+    "email": "diego.zoracky@gmail.com",
+    "url": "https://github.com/DiegoZoracKy/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "aws",
+    "s3",
+    "bucket",
+    "key",
+    "path",
+    "name"
+  ],
+  "dependencies": {
+    "csv-parser": "^2.0.0"
+  }
+}
