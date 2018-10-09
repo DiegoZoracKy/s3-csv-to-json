@@ -5,7 +5,7 @@ const stream = require('stream');
 const path = require('path');
 const csv = require('csv-parser');
 const zlib = require('zlib');
-const parseS3BucketKey = require('../modules/parse-s3-bucket-key');
+const parseS3BucketKey = require('parse-s3-bucket-key');
 
 function createObjectToJsonLineStream() {
     return new stream.Transform({
